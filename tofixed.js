@@ -1,11 +1,11 @@
 var toFixed = function toFixed(num, precision) {
-  var numString = String(num);
-  var position = numString.indexOf('.');
-  var inputDigits = numString.length - position - 1;
   var shiftedNumString = '';
   var shiftedPosition;
   var roundedNumber;
-  if (position === -1) { inputDigits = 0; }
+  var numString = String(num);
+  var decimalPosition = numString.indexOf('.');
+  var inputDigits = numString.length - decimalPosition - 1;
+  if (decimalPosition === -1) { inputDigits = 0; }
 
   // if no rounding needed, use native toFixed;
   if (inputDigits <= precision) {
@@ -13,7 +13,7 @@ var toFixed = function toFixed(num, precision) {
   }
   // else - move decimal point to the right by precision places
   numString = numString.replace('.', '');
-  shiftedPosition = position + precision;
+  shiftedPosition = decimalPosition + precision;
   shiftedNumString = numString.substring(0, shiftedPosition) + '.' +
     numString.substring(shiftedPosition, numString.length);
   // round, divide and return
