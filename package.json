@@ -1,0 +1,23 @@
+{
+  "name": "tofixed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faktotum85/toFixed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faktotum85/toFixed/issues"
+  },
+  "homepage": "https://github.com/faktotum85/toFixed#readme",
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.1.0"
+  }
+}

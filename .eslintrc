@@ -1,0 +1,7 @@
+{
+  "extends": "airbnb/legacy",
+  "globals": {
+    "tests": false,
+    "eq": false,
+    }
+}
