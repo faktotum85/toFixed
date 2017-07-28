@@ -1,7 +1,8 @@
-var toFixed = function toFixed(num, precision) {
+var toFixed = function toFixed(num, precisionParameter) {
   var shiftedNumString = '';
   var shiftedPosition;
   var roundedNumber;
+  var precision = precisionParameter || 0;
   var numString = String(num);
   var decimalPosition = numString.indexOf('.');
   var inputDigits = numString.length - decimalPosition - 1;
@@ -39,5 +40,8 @@ tests({
   },
   'It should work if the precision exceeds the given input': function () {
     eq(toFixed(9.9, 2), '9.90');
+  },
+  'Should default to precision 0': function () {
+    eq(toFixed(1.12), '1');
   }
 });
